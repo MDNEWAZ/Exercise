@@ -11,36 +11,20 @@ namespace IncludeHelp
         // Main Method 
         static void Main(string[] args)
         {
-            int a;
-            int b;
-            int min;
-            int max;
-
-            //input numbers
-            Console.Write("Enter first number : ");
-            a = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter second number: ");
-            b = Convert.ToInt32(Console.ReadLine());
-
-            //finding max number using if-else
-            if (a > b)
-                max = a;
-            else
-                max = b;
-
-
-            Console.WriteLine("Maximum number = {0}", max);
-
-            //finding max number using ternary operator
-            //max = (a > b) ? a : b;
-
-
-
-          
+            /// <summary>
+            /// Write a program which takes two numbers from the console and displays the maximum of the two.
+            /// </summary>
             
+            {
+                Console.Write("Enter a number: ");
+                var number1 = Convert.ToInt32(Console.ReadLine());
 
-            //hit ENTER to exit the program
-            Console.ReadLine();
+                Console.Write("Enter another number: ");
+                var number2 = Convert.ToInt32(Console.ReadLine());
+
+                var max = (number1 > number2) ? number1 : number2;
+                Console.WriteLine("Max is " + max);
+            }
         }
     }
 }
