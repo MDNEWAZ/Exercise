@@ -1,26 +1,23 @@
 ﻿using System;
 
-namespace Exercise_1
+namespace CSharp1Exercises.ControlFlow
 {
-    
-    class Program
-    {      
-        static void Main(string[]args)
+    public class Conditionals
+    {
+        /// <summary>
+        /// Write a program and ask the user to enter a number. The number should be between 1 to 10. If the user enters 
+        /// a valid number, display "Valid" on the console. Otherwise, display "Invalid". (This logic is used a lot in 
+        /// applications where values entered into input boxes need to be validated.)
+        /// </summary>
+        public void Exercise1()
         {
-            Console.WriteLine("Enter a number between 1 to 10");
-           var m = Console.ReadLine();
-           var k = Convert.ToInt32(m);
-            if(k<=10 && k>=0)
-            {
-                Console.WriteLine("Congrats!!! you enter a valid number");
-            }
-
+            Console.Write("Enter a number between 1 to 10: ");
+            var input = Console.ReadLine();
+            var number = Convert.ToInt32(input);
+            if (number >= 1 && number <= 10)
+                Console.WriteLine("Valid");
             else
-            {
-                Console.WriteLine("You Enter  a Invalid number");
-
-            }
-
+                Console.WriteLine("Invalid");
         }
     }
 }
